@@ -41,12 +41,9 @@ dependencies = [
     "ipywidgets",
     "jupyterlab",
     "pip",
+    # --- FDR filtering for de novo sequencing ---
+    "winnow-fdr>=2.0.0",
 ]
-
-# winnow (Step 7, optional/advanced) is intentionally NOT included: winnow-fdr
-# requires torch>=2.10, which conflicts with InstaNovo's torch==2.6.0 above - they
-# can't share one environment. Run Step 7 on Colab, or in a separate throwaway env:
-#   uv pip install "winnow-fdr @ git+https://github.com/instadeepai/winnow.git@revisions"
 
 # uv: pull torch from the CUDA 12.6 wheel index.
 # See https://docs.astral.sh/uv/guides/integration/pytorch/
